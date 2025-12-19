@@ -101,7 +101,6 @@
             </p>
         </section>
 
-        <!-- New Section: Social Media -->
         <section>
             <h2>Social Media</h2>
             <p>
@@ -118,11 +117,40 @@
             </p>
         </section>
 
+        <!-- Contact Us (anti-spam protected) -->
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                For professional inquiries, collaborations or general questions,
+                feel free to contact us via email.
+            </p>
+
+            <p id="contact-email">
+                Email address loading…
+            </p>
+        </section>
+
     </main>
 
     <footer>
         <p>© Foxwell Collective Interactive</p>
     </footer>
+
+    <script>
+        (function () {
+            const user = "foxwellcollective.contact";
+            const domain = "gmail.com";
+            const email = user + "@" + domain;
+
+            const link = document.createElement("a");
+            link.href = "mailto:" + email;
+            link.textContent = email;
+
+            const container = document.getElementById("contact-email");
+            container.textContent = "";
+            container.appendChild(link);
+        })();
+    </script>
 
 </body>
 </html>
